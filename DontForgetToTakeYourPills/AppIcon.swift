@@ -18,5 +18,12 @@ struct AppIcon: View {
                 )
             )
             .shadow(radius: 2, x: 2, y: 2)
+            .aspectRatio(1, contentMode: .fit)
+    }
+}
+
+struct AppIcon_Previews: PreviewProvider {
+    static var previews: some View {
+        AppIcon()
     }
 }
