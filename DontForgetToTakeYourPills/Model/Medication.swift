@@ -17,4 +17,8 @@ struct Medication: Equatable, Identifiable {
     mutating func takeOnePill() {
         suppliesCount -= 1
     }
+    
+    mutating func addOnePill() {
+        suppliesCount += 1
+    }
 }

@@ -14,11 +14,14 @@ struct MedicationView: View {
         HStack {
             Text("\(model.name), take \(model.takenPerDayCount) per day, in store: \(model.suppliesCount) pcs.")
             Spacer()
-            Button("Take one") {
+            Button("Take") {
                 model.takeOnePill()
             }
+            // XXX: this won't work
+//            Button("Add") {
+//                model.addOnePill()
+//            }
         }
-        .padding()
     }
 }
 

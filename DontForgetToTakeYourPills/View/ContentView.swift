@@ -43,10 +43,11 @@ struct ContentView: View {
                     .font(.title)
             }
             
-            ForEach($model.medications) { medication in
-                MedicationView(model: medication)
+            List {
+                ForEach($model.medications) { medication in
+                    MedicationView(model: medication)
+                }
             }
-            Spacer()
         }
         .padding()
     }
