@@ -44,6 +44,7 @@
 		B313D60D2A69346700A61A5E /* DontForgetToTakeYourPillsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontForgetToTakeYourPillsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B313D6112A69346700A61A5E /* DontForgetToTakeYourPillsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontForgetToTakeYourPillsUITests.swift; sourceTree = "<group>"; };
 		B313D6132A69346700A61A5E /* DontForgetToTakeYourPillsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontForgetToTakeYourPillsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B313D6202A693A9900A61A5E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		B313D5EA2A69346400A61A5E = {
 			isa = PBXGroup;
 			children = (
+				B313D6202A693A9900A61A5E /* README.md */,
 				B313D5F52A69346400A61A5E /* DontForgetToTakeYourPills */,
 				B313D6062A69346700A61A5E /* DontForgetToTakeYourPillsTests */,
 				B313D6102A69346700A61A5E /* DontForgetToTakeYourPillsUITests */,
@@ -420,6 +422,7 @@
 				DEVELOPMENT_TEAM = CNX8FLDR3T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Pills;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,6 +453,7 @@
 				DEVELOPMENT_TEAM = CNX8FLDR3T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Pills;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
