@@ -11,9 +11,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
-                Text("Don't forget to take your pills")
-                    .font(.largeTitle)
+                HStack {
+                    AppIcon()
+                        .frame(width: 64, height: 64)
+                    Text("Don't forget to take your pills")
+                        .font(.largeTitle)
                     .fontWeight(.heavy)
+                }
                 
                 Spacer()
                     .frame(height: 50)
