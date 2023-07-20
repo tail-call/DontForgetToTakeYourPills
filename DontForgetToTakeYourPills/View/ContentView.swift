@@ -35,7 +35,7 @@ struct ContentView: View {
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                 }
-                
+
                 Spacer()
                     .frame(height: 50)
 
@@ -44,13 +44,10 @@ struct ContentView: View {
             }
             .padding()
             
-            List {
-                ForEach($model.medications) { medication in
-                    MedicationView(model: medication)
-                }
+            List($model.medications, id: \.id) { medication in
+                MedicationView(model: medication)
             }
         }
-
     }
 }
 
