@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var pillsTakenCount = 0
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -25,14 +27,11 @@ struct ContentView: View {
                 Text("Pills are good for your health")
                     .font(.title)
                 
-                HStack() {
-                    Text("Pills")
-                    Spacer()
-                    Text("=")
-                    Spacer()
-                    Text("Good")
+                Text("You took \(pillsTakenCount) pills")
+                
+                Button("Take one more") {
+                    pillsTakenCount += 1
                 }
-                .padding(8.0)
             }
         }
         .padding()
