@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var medications: [Medication] = [
+struct ContentModel {
+    var medications: [Medication] = [
         .init(
             name: "Pregabalin",
             suppliesCount: 100,
@@ -20,6 +20,10 @@ struct ContentView: View {
             takenPerDayCount: 1
         )
     ]
+}
+
+struct ContentView: View {
+    @State private var model = ContentModel()
     
     var body: some View {
         VStack {
@@ -39,17 +43,13 @@ struct ContentView: View {
                     .font(.title)
             }
             
-            ForEach($medications) { medication in
+            ForEach($model.medications) { medication in
                 HStack {
                     let m = medication.wrappedValue
                     Text("\(m.name), take \(m.takenPerDayCount) per day, in store: \(m.suppliesCount) pcs.")
                     Spacer()
                     Button("Take one") {
-                        if let index = medications.firstIndex(where: {
-                            medication.wrappedValue == $0
-                        }) {
-                            medications[index].suppliesCount -= 1
-                        }
+                        medication.wrappedValue.takeOnePill()
                     }
                 }
                 .padding()

@@ -13,4 +13,8 @@ struct Medication: Equatable, Identifiable {
     var takenPerDayCount: Int
 
     var id: String { name }
+    
+    mutating func takeOnePill() {
+        suppliesCount -= 1
+    }
 }
