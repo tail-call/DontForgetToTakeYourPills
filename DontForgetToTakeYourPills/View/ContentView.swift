@@ -9,7 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MedicationListView()
+        NavigationView {
+            VStack {
+                VStack(alignment: .leading) {
+                    HStack {
+                        AppIcon()
+                            .frame(width: 64, height: 64)
+                        Text("Don't forget to take your pills")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                    }
+                }
+                .padding()
+
+                Spacer()
+
+                NavigationLink {
+                    MedicationListView()
+                } label: {
+                    Text("Supplies")
+                        .font(.largeTitle)
+                }
+                
+                Spacer()
+                    .frame(height: 50)
+                
+                NavigationLink {
+                    Text("Not implemented yet")
+                } label: {
+                    Text("Calender")
+                        .font(.largeTitle)
+                }
+                
+                Spacer()
+            }
+        }
     }
 }
 
