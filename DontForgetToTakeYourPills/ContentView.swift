@@ -10,10 +10,26 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            VStack(alignment: .leading) {
+                Text("Don't forget to take your pills")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                
+                Spacer()
+                    .frame(height: 50)
+
+                Text("Pills are good for your health")
+                    .font(.title)
+                
+                HStack() {
+                    Text("Pills")
+                    Spacer()
+                    Text("=")
+                    Spacer()
+                    Text("Good")
+                }
+                .padding(8.0)
+            }
         }
         .padding()
     }
