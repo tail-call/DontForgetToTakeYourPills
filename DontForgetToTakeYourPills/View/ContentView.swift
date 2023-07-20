@@ -42,6 +42,7 @@ struct ContentView: View {
                 Text("Pills are good for your health")
                     .font(.title)
             }
+            .padding()
             
             List {
                 ForEach($model.medications) { medication in
@@ -49,7 +50,7 @@ struct ContentView: View {
                 }
             }
         }
-        .padding()
+
     }
 }
 
