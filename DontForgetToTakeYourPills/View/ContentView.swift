@@ -44,15 +44,7 @@ struct ContentView: View {
             }
             
             ForEach($model.medications) { medication in
-                HStack {
-                    let m = medication.wrappedValue
-                    Text("\(m.name), take \(m.takenPerDayCount) per day, in store: \(m.suppliesCount) pcs.")
-                    Spacer()
-                    Button("Take one") {
-                        medication.wrappedValue.takeOnePill()
-                    }
-                }
-                .padding()
+                MedicationView(model: medication)
             }
             Spacer()
         }

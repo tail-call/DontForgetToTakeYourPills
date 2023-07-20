@@ -17,6 +17,7 @@
 		B313D6222A693F5E00A61A5E /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D6212A693F5E00A61A5E /* AppIcon.swift */; };
 		B313D6242A693FA900A61A5E /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D6232A693FA900A61A5E /* Asset.swift */; };
 		B313D6282A6946C600A61A5E /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D6272A6946C600A61A5E /* Medication.swift */; };
+		B313D62C2A69812700A61A5E /* MedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D62B2A69812700A61A5E /* MedicationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B313D6212A693F5E00A61A5E /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		B313D6232A693FA900A61A5E /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		B313D6272A6946C600A61A5E /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		B313D62B2A69812700A61A5E /* MedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B313D5F82A69346400A61A5E /* ContentView.swift */,
+				B313D62B2A69812700A61A5E /* MedicationView.swift */,
 				B313D6212A693F5E00A61A5E /* AppIcon.swift */,
 			);
 			path = View;
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B313D6282A6946C600A61A5E /* Medication.swift in Sources */,
+				B313D62C2A69812700A61A5E /* MedicationView.swift in Sources */,
 				B313D5F92A69346400A61A5E /* ContentView.swift in Sources */,
 				B313D5F72A69346400A61A5E /* DontForgetToTakeYourPillsApp.swift in Sources */,
 				B313D6242A693FA900A61A5E /* Asset.swift in Sources */,
