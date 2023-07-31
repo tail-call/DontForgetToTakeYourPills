@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State var model = AppModel()
+    @State private var selection: Tab = .calendar
+    
+    enum Tab {
+        case calendar
+        case supplies
+    }
     
     var body: some View {
         NavigationView {
@@ -23,27 +29,28 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-
-                Spacer()
-
-                NavigationLink {
-                    MedicationListView(model: $model)
-                } label: {
-                    Text("Supplies")
-                        .font(.largeTitle)
-                }
                 
-                Spacer()
-                    .frame(height: 50)
-                
-                NavigationLink {
+                TabView(selection: $selection) {
                     Text("Not implemented yet")
-                } label: {
-                    Text("Calender")
-                        .font(.largeTitle)
+                        .tag(Tab.supplies)
+                        .tabItem {
+                            Label(title: {
+                                Text("Calendar")
+                            }, icon: {
+                                Image(systemName: "calendar")
+                            })
+                        }
+                    
+                    MedicationListView(model: $model)
+                        .tag(Tab.calendar)
+                        .tabItem {
+                            Label(title: {
+                                Text("Supplies")
+                            }, icon: {
+                                Image(systemName: "cube.box")
+                            })
+                        }
                 }
-                
-                Spacer()
             }
         }
     }
