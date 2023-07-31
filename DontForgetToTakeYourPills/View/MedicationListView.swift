@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MedicationListView: View {
-    @State private var model = AppModel()
+    @Binding var model: AppModel
     
     var body: some View {
         VStack {
@@ -21,7 +21,10 @@ struct MedicationListView: View {
 }
 
 struct MedicationListView_Previews: PreviewProvider {
+    static var model = AppModel(medications: [
+        Medication(name: "Alpha", suppliesCount: 33, takenPerDayCount: 44)
+    ])
     static var previews: some View {
-        MedicationListView()
+        MedicationListView(model: Binding(get: { model }, set: { model = $0 }))
     }
 }

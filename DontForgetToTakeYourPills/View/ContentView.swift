@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var model = AppModel()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -25,7 +27,7 @@ struct ContentView: View {
                 Spacer()
 
                 NavigationLink {
-                    MedicationListView()
+                    MedicationListView(model: $model)
                 } label: {
                     Text("Supplies")
                         .font(.largeTitle)
