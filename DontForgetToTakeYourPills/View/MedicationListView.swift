@@ -11,12 +11,19 @@ struct MedicationListView: View {
     @Binding var model: AppModel
     
     var body: some View {
-        VStack {
-            List($model.medications, id: \.id) { medication in
-                MedicationView(model: medication)
+        NavigationView {
+            VStack {
+                List($model.medications, id: \.id) { medication in
+                    NavigationLink {
+                        Text("Not implemented yet")
+                            .navigationTitle("Edit medication")
+                    } label: {
+                        MedicationView(model: medication)
+                    }
+                }
             }
+            .navigationTitle("Supplies")
         }
-        .navigationTitle("Supplies")
     }
 }
 

@@ -7,20 +7,48 @@
 
 import SwiftUI
 
+fileprivate let iconDimension: CGFloat = 40
+
 struct MedicationView: View {
     @Binding var model: Medication
     
     var body: some View {
         HStack {
-            Text("\(model.name), take \(model.takenPerDayCount) per day, in store: \(model.suppliesCount) pcs.")
-            Spacer()
-            Button("Take") {
-                model.takeOnePill()
+            GeometryReader { geometry in
+                ZStack {
+                    Color.white
+                        .cornerRadius(geometry.size.width / 3)
+                        .shadow(radius: 2, x: 1, y: 1)
+
+                    Path { path in
+                        path.addRoundedRect(
+                            in: CGRect(x: 0, y: 0,
+                                       width: 0.5, height: 1),
+                            cornerSize: CGSize(width: 0.5, height: 0.5)
+                        )
+                    }
+                    .transform(.init(
+                        translationX: 0.25,
+                        y: 0.0
+                    ))
+                    .transform(.init(
+                        scaleX: geometry.size.width,
+                        y: geometry.size.height
+                    ))
+                    .rotation(Angle(degrees: 45))
+                    .fill(.orange)
+                }
             }
-            // XXX: this won't work
-//            Button("Add") {
-//                model.addOnePill()
-//            }
+            .frame(width: iconDimension, height: iconDimension)
+            
+            VStack(alignment: .leading) {
+                Text("\(model.name)")
+                    .fontWeight(.bold)
+                Text("\(model.suppliesCount) pcs. in store")
+                    .font(.system(size: 12))
+                Text("Take \(model.takenPerDayCount) per day")
+                    .font(.system(size: 12))
+            }
         }
     }
 }

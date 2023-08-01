@@ -11,6 +11,7 @@ struct Medication: Equatable, Identifiable {
     var name: String
     var suppliesCount: Int
     var takenPerDayCount: Int
+    
 
     var id: String { name }
     
