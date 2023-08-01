@@ -14,21 +14,11 @@ struct ContentView: View {
     enum Tab {
         case calendar
         case supplies
+        case info
     }
     
     var body: some View {
         VStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    AppIcon()
-                        .frame(width: 64, height: 64)
-                    Text("Don't forget to take your pills")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                }
-            }
-            .padding()
-            
             TabView(selection: $selection) {
                 Text("Not implemented yet")
                     .tag(Tab.supplies)
@@ -49,6 +39,24 @@ struct ContentView: View {
                             Image(systemName: "cube.box")
                         })
                     }
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        AppIcon()
+                            .frame(width: 64, height: 64)
+                        Text("Don't forget to take your pills")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                    }
+                }
+                .tag(Tab.info)
+                .tabItem {
+                    Label(title: {
+                        Text("Info")
+                    }, icon: {
+                        Image(systemName: "info.circle")
+                    })
+                }
             }
         }
     }
