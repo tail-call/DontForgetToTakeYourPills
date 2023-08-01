@@ -20,6 +20,7 @@
 		B313D62C2A69812700A61A5E /* MedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D62B2A69812700A61A5E /* MedicationView.swift */; };
 		B313D62E2A69875300A61A5E /* MedicationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D62D2A69875300A61A5E /* MedicationListView.swift */; };
 		B313D6302A69879600A61A5E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D62F2A69879600A61A5E /* AppModel.swift */; };
+		B36C3E132A79709100861A3D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C3E122A79709100861A3D /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B313D62B2A69812700A61A5E /* MedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationView.swift; sourceTree = "<group>"; };
 		B313D62D2A69875300A61A5E /* MedicationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationListView.swift; sourceTree = "<group>"; };
 		B313D62F2A69879600A61A5E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		B36C3E122A79709100861A3D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B313D5F82A69346400A61A5E /* ContentView.swift */,
+				B36C3E122A79709100861A3D /* InfoView.swift */,
 				B313D62D2A69875300A61A5E /* MedicationListView.swift */,
 				B313D62B2A69812700A61A5E /* MedicationView.swift */,
 				B313D6212A693F5E00A61A5E /* AppIcon.swift */,
@@ -300,6 +303,7 @@
 				B313D62E2A69875300A61A5E /* MedicationListView.swift in Sources */,
 				B313D5F72A69346400A61A5E /* DontForgetToTakeYourPillsApp.swift in Sources */,
 				B313D6242A693FA900A61A5E /* Asset.swift in Sources */,
+				B36C3E132A79709100861A3D /* InfoView.swift in Sources */,
 				B313D6222A693F5E00A61A5E /* AppIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

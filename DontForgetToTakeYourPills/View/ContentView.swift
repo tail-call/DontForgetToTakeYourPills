@@ -40,23 +40,15 @@ struct ContentView: View {
                         })
                     }
                 
-                VStack(alignment: .leading) {
-                    HStack {
-                        AppIcon()
-                            .frame(width: 64, height: 64)
-                        Text("Don't forget to take your pills")
-                            .font(.largeTitle)
-                            .fontWeight(.heavy)
+                InfoView()
+                    .tag(Tab.info)
+                    .tabItem {
+                        Label(title: {
+                            Text("Info")
+                        }, icon: {
+                            Image(systemName: "info.circle")
+                        })
                     }
-                }
-                .tag(Tab.info)
-                .tabItem {
-                    Label(title: {
-                        Text("Info")
-                    }, icon: {
-                        Image(systemName: "info.circle")
-                    })
-                }
             }
         }
     }
