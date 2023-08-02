@@ -9,47 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @State var model = AppModel()
-    @State private var selection: Tab = .calendar
-    
-    enum Tab {
-        case calendar
-        case supplies
-        case info
-    }
+    @State private var selection = "Calendar"
     
     var body: some View {
-        VStack {
-            TabView(selection: $selection) {
-                Text("Not implemented yet")
-                    .tag(Tab.supplies)
-                    .tabItem {
-                        Label(title: {
-                            Text("Calendar")
-                        }, icon: {
-                            Image(systemName: "calendar")
-                        })
-                    }
-                
-                MedicationListView(model: $model)
-                    .tag(Tab.calendar)
-                    .tabItem {
-                        Label(title: {
-                            Text("Supplies")
-                        }, icon: {
-                            Image(systemName: "cube.box")
-                        })
-                    }
-                
-                InfoView()
-                    .tag(Tab.info)
-                    .tabItem {
-                        Label(title: {
-                            Text("Info")
-                        }, icon: {
-                            Image(systemName: "info.circle")
-                        })
-                    }
-            }
+        TabView(selection: $selection) {
+            AppTab(
+                title: "Calendar",
+                imageName: "calendar"
+            ) { Text("Not implemented yet") }
+            
+            AppTab(
+                title: "Supplies",
+                imageName: "cube.box"
+            ) { MedicationListView(model: $model) }
+            
+            AppTab(
+                title: "Info",
+                imageName: "info.circle"
+            ) { InfoView() }
         }
     }
 }

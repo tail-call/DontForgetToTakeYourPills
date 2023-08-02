@@ -21,6 +21,7 @@
 		B313D62E2A69875300A61A5E /* MedicationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D62D2A69875300A61A5E /* MedicationListView.swift */; };
 		B313D6302A69879600A61A5E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313D62F2A69879600A61A5E /* AppModel.swift */; };
 		B36C3E132A79709100861A3D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C3E122A79709100861A3D /* InfoView.swift */; };
+		B36C3E152A7A402100861A3D /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C3E142A7A402100861A3D /* AppTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B313D62D2A69875300A61A5E /* MedicationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationListView.swift; sourceTree = "<group>"; };
 		B313D62F2A69879600A61A5E /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		B36C3E122A79709100861A3D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		B36C3E142A7A402100861A3D /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				B313D5F82A69346400A61A5E /* ContentView.swift */,
+				B36C3E142A7A402100861A3D /* AppTab.swift */,
 				B36C3E122A79709100861A3D /* InfoView.swift */,
 				B313D62D2A69875300A61A5E /* MedicationListView.swift */,
 				B313D62B2A69812700A61A5E /* MedicationView.swift */,
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B313D6282A6946C600A61A5E /* Medication.swift in Sources */,
+				B36C3E152A7A402100861A3D /* AppTab.swift in Sources */,
 				B313D62C2A69812700A61A5E /* MedicationView.swift in Sources */,
 				B313D5F92A69346400A61A5E /* ContentView.swift in Sources */,
 				B313D6302A69879600A61A5E /* AppModel.swift in Sources */,
