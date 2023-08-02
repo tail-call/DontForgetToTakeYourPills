@@ -17,7 +17,16 @@ struct InfoView: View {
                     .font(.largeTitle)
                     .fontWeight(.heavy)
             }
+            ScrollView {
+                Text("General information")
+                    .font(.system(.title))
+
+                Text("  Thy pills are thy life. Thy well-being depends on these small pellets that contain the wondrous mixture of substances so arcane that people spend years to study them in the medical colleges.")
+                Text("  I offer thee a challenge. Thou shalt not skip your medication. With this app, thou shall conquer this challenge. I grant thee the power of medication tracking.")
+                Text("  This great power shall aid thee in never skipping your medications.")
+            }
         }
+        .padding(10)
     }
 }
 
