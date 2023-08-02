@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InfoView: View {
+    @State private var opacity = 0.0
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -27,6 +29,12 @@ struct InfoView: View {
             }
         }
         .padding(10)
+        .opacity(opacity)
+        .onAppear {
+            withAnimation {
+                opacity = 1
+            }
+        }
     }
 }
 
