@@ -16,7 +16,7 @@ struct ContentView: View {
             AppTab(
                 title: "Calendar",
                 imageName: "calendar"
-            ) { Text("Not implemented yet") }
+            ) { CalendarView() }
             
             AppTab(
                 title: "Supplies",
