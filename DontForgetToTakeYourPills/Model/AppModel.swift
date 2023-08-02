@@ -20,4 +20,12 @@ struct AppModel {
             takenPerDayCount: 1
         )
     ]
+    
+    mutating func createNewMedication() {
+        medications.insert(Medication(
+            name: "New Medication",
+            suppliesCount: 0,
+            takenPerDayCount: 0
+        ), at: 0)
+    }
 }

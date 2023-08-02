@@ -23,6 +23,11 @@ struct MedicationListView: View {
                 }
             }
             .navigationTitle("Supplies")
+            .toolbar {
+                Button("Add") {
+                    model.createNewMedication()
+                }
+            }
         }
     }
 }
